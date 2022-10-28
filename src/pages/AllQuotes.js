@@ -14,9 +14,14 @@ const DUMMMY_QUOTES = [
 
 const AllQuotes = () => {
 
-  const {sendRequest, status, data:loadedQuotes , error} = useHttp(getAllQuotes)
+  let {sendRequest, status, data:loadedQuotes , error} = useHttp(getAllQuotes)
 
-console.log(loadedQuotes, 'getting the quotes ')
+// console.log(loadedQuotes, 'getting the quotes ')
+
+if(loadedQuotes == null){
+  loadedQuotes = DUMMMY_QUOTES
+}
+
 
 useEffect(()=>{
   sendRequest()
@@ -41,10 +46,11 @@ if(error){
 if(status === 'completed' && (!loadedQuotes || loadedQuotes.length === 0)){
   return <NoQuotesFound/>
 }
+
   return (
 
-       <QuoteList quotes={loadedQuotes}/>
-      //  <QuoteList quotes={DUMMMY_QUOTES}/>
+      //  <QuoteList quotes={loadedQuotes}/>
+       <QuoteList quotes={DUMMMY_QUOTES}/>
   
   )
 }
