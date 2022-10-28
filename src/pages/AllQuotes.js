@@ -14,18 +14,23 @@ const DUMMMY_QUOTES = [
 
 const AllQuotes = () => {
 
+const [fetchdata , setFetchData] =  React.useState(DUMMMY_QUOTES)
+
   let {sendRequest, status, data:loadedQuotes , error} = useHttp(getAllQuotes)
 
 // console.log(loadedQuotes, 'getting the quotes ')
 
-if(loadedQuotes == null){
-  loadedQuotes = DUMMMY_QUOTES
-}
+// if(loadedQuotes == null){
+//   loadedQuotes = DUMMMY_QUOTES
+// }
 
 
 useEffect(()=>{
   sendRequest()
+  if(loadedQuotes == null){
 
+    setFetchData(loadedQuotes)
+  }
 },[sendRequest])
 
 
