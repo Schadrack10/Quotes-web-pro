@@ -13,9 +13,18 @@ const DUMMMY_QUOTES = [
 
 
 const AllQuotes = () => {
+
   const {sendRequest, status, data:loadedQuotes , error} = useHttp(getAllQuotes)
 
-console.log(loadedQuotes, 'getting ')
+console.log(loadedQuotes, 'getting the quotes ')
+
+useEffect(()=>{
+  sendRequest()
+
+},[sendRequest])
+
+
+
 
 if(status === 'pending'){
   return (
@@ -34,7 +43,8 @@ if(status === 'completed' && (!loadedQuotes || loadedQuotes.length === 0)){
 }
   return (
 
-       <QuoteList quotes={DUMMMY_QUOTES}/>
+       <QuoteList quotes={loadedQuotes}/>
+      //  <QuoteList quotes={DUMMMY_QUOTES}/>
   
   )
 }
