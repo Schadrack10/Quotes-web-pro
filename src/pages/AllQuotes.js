@@ -20,9 +20,9 @@ const [fetchdata , setFetchData] =  React.useState(DUMMMY_QUOTES)
 
 // console.log(loadedQuotes, 'getting the quotes ')
 
-// if(loadedQuotes == null){
-//   loadedQuotes = DUMMMY_QUOTES
-// }
+if(loadedQuotes == null){
+  loadedQuotes = DUMMMY_QUOTES
+}
 
 
 useEffect(()=>{
@@ -54,8 +54,8 @@ if(status === 'completed' && (!loadedQuotes || loadedQuotes.length === 0)){
 
   return (
 
-      //  <QuoteList quotes={loadedQuotes}/>
-       <QuoteList quotes={DUMMMY_QUOTES}/>
+       <QuoteList quotes={loadedQuotes}/>
+      //  <QuoteList quotes={DUMMMY_QUOTES}/>
   
   )
 }
