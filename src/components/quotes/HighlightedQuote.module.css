@@ -1,5 +1,5 @@
 .quote {
-  background-color: #162b2b;
+  background-color: #580000;
   color: white;
   border-radius: 6px;
   padding: 3rem;
@@ -16,5 +16,5 @@
   font-style: italic;
   font-size: 1.5rem;
   text-align: right;
-  color: #a1e0e0;
+  color: rgb(255, 171, 140);
 }

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import QuoteList from '../components/quotes/QuoteList'
 import useHttp from '../hooks/use-http'
 import LoadingSpinner from '../components/UI/LoadingSpinner'
@@ -15,6 +15,7 @@ const DUMMMY_QUOTES = [
 const AllQuotes = () => {
 
 const [fetchdata , setFetchData] =  React.useState(DUMMMY_QUOTES)
+const [filterTerm , setFilterTerm ] = useState('')
 
   let {sendRequest, status, data:loadedQuotes , error} = useHttp(getAllQuotes)
 
@@ -53,7 +54,7 @@ if(status === 'completed' && (!loadedQuotes || loadedQuotes.length === 0)){
 }
 
   return (
-
+       
        <QuoteList quotes={loadedQuotes}/>
       //  <QuoteList quotes={DUMMMY_QUOTES}/>
   

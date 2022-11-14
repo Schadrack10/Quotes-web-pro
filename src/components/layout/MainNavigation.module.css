@@ -5,12 +5,17 @@
   padding: 0 10%;
   justify-content: space-between;
   align-items: center;
-  background-color: #008080;
+  background-color:#580000;
 }
 
 .logo {
   font-size: 2rem;
-  color: white;
+  color: #fff;
+  font-style: oblique;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 250px;
 }
 
 .nav ul {
@@ -27,7 +32,7 @@
 
 .nav a {
   text-decoration: none;
-  color: #88dfdf;
+  color: rgb(248, 164, 134);
 }
 
 .nav a:hover,

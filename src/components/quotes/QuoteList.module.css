@@ -6,14 +6,14 @@
 
 .sorting {
   padding-bottom: 1rem;
-  border-bottom: 3px solid #b2d4d4;
+  border-bottom: 3px solid #580000;
   margin-bottom: 2rem;
 }
 
 .sorting button {
   font: inherit;
-  color: teal;
-  border: 1px solid teal;
+  color: #000;
+  border: 1px solid #580000;
   background-color: transparent;
   border-radius: 4px;
   padding: 0.5rem 1.5rem;
@@ -21,5 +21,18 @@
 }
 
 .sorting button:hover {
-  background-color: #c2fafa;
+  background-color: #580000;
+  color: #fff;
+}
+.searchInput{
+    background:transparent;
+    border:2px solid #580000;
+    border-radius: 10px;
+  font-size: 18px;
+
+
+}
+.searchInput::placeholder{
+  color: #580000;
+  font-size: 18px;
 }

@@ -5,7 +5,7 @@
 body {
   font-family: sans-serif;
   margin: 0;
-  background-color: #e7f8f8;
+  background-color: rgb(255, 224, 213);
 }
 
 .centered {
@@ -24,24 +24,24 @@ body {
 
 .btn {
   text-decoration: none;
-  background-color: teal;
+  background-color: #8f0000;
   color: white;
   border-radius: 4px;
   padding: 0.75rem 1.5rem;
-  border: 1px solid teal;
+  border: 1px solid rgb(179, 54, 0);
   cursor: pointer;
 }
 
 .btn:hover,
 .btn:active {
-  background-color: #11acac;
-  border-color: #11acac;
+  background-color: #580000;
+  border-color: #580000;
 }
 
 .btn--flat {
   cursor: pointer;
   font: inherit;
-  color: teal;
+  color: #580000;
   border: none;
   background-color: none;
   text-decoration: none;
@@ -51,6 +51,6 @@ body {
 
 .btn--flat:hover,
 .btn--flat:active {
-  background-color: teal;
+  background-color: #580000;
   color: white;
 }
