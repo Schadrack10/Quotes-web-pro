@@ -69,16 +69,12 @@ const QuoteList = (props) => {
         }
 
         ).map((quote) => (
-          <>
-
             <QuoteItem
               key={quote.id}
               id={quote.id}
               author={quote.author}
               text={quote.text}
             />
-
-          </>
         ))}
       </ul>
     </Fragment>
